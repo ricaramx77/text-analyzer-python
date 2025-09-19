@@ -8,15 +8,16 @@ class TextAnalyzerApp:
         self.root.title("Text Analyzer")
         self.root.geometry("500x500")
 
-        self.text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=60, height=15)
+
+        self.text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=50, height=7, bg="black", fg="white", insertbackground="white")
         self.text_area.pack(pady=10)
 
         self.analyze_btn = tk.Button(root, text="Analyze", command=self.analyze_text)
         self.analyze_btn.pack(pady=5)
 
-        self.result_label = tk.Label(root, text="Results:", font=("Arial", 12, "bold"))
+        self.result_label = tk.Label(root, text="Results:", font=("Arial", 12, "bold"), bg="black", fg="white")
         self.result_label.pack(pady=5)
-        self.result_box = tk.Text(root, height=10, width=60, state=tk.DISABLED)
+        self.result_box = tk.Text(root, height=18, width=70, state=tk.DISABLED, bg="black", fg="white")
         self.result_box.pack(pady=5)
 
     def analyze_text(self):
